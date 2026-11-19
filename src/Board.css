@@ -1,0 +1,84 @@
+.board-section {
+  position: relative;
+}
+
+.board-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  aspect-ratio: 1 / 1;
+  width: min(90vmin, 700px);
+  border: 3px solid #333;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fdfaf3;
+}
+
+.board-square {
+  position: relative;
+  border: 1px solid #d8d2c4;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 3px;
+  font-size: 0.7rem;
+  color: #555;
+  background: #fdfaf3;
+}
+
+.board-square.snake { background: #ffe5e5; }
+.board-square.ladder { background: #e5f5e5; }
+
+.square-number {
+  font-weight: 600;
+}
+
+.tokens {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  pointer-events: none;
+}
+
+.token {
+  width: 60%;
+  max-width: 28px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  overflow: hidden;
+}
+
+.token img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.token.active {
+  animation: token-bounce 0.7s ease-in-out infinite;
+}
+
+@keyframes token-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+.snake-tag,
+.ladder-tag {
+  position: absolute;
+  bottom: 2px;
+  right: 3px;
+  font-size: 0.6rem;
+  color: #888;
+}

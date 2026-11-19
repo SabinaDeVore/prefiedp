@@ -1,0 +1,52 @@
+.player-panel {
+  padding: 1rem;
+  border: 2px solid #333;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.player-panel ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.player-panel li {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fafafa;
+}
+
+.player-panel li.active {
+  border-color: #333;
+  background: #fff8dc;
+}
+
+.swatch {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid #333;
+}
+
+.name {
+  font-weight: 600;
+}
+
+.badge {
+  font-size: 0.75rem;
+  color: #666;
+}
+
+.pos {
+  font-size: 0.75rem;
+  color: #333;
+}
