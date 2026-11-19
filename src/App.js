@@ -1,12 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-function Home() {
-  return <h1>Snakes and Ladders</h1>;
-}
-
-function Game() {
-  return <h1>Game Board</h1>;
-}
+import Home from "./pages/Home";
+import Game from "./pages/Game";
 
 function App() {
   return (
